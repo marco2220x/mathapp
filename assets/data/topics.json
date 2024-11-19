@@ -1,0 +1,30 @@
+{
+    "topics": [
+      {
+        "title": "Polinomios",
+        "activities": [
+          {
+            "title": "Introducción a polinomios",
+            "description": "Un polinomio es una expresión matemática compuesta por variables, coeficientes y exponentes.",
+            "videoUrls": ["https://www.youtube.com/watch?v=Q2kuPgS1Hi4&list=RDq_zurDiCA1E&index=6"]
+          },
+          {
+            "title": "Partes de las expresiones",
+            "description": "Las expresiones polinómicas están formadas por términos que incluyen un coeficiente y una variable.",
+            "videoUrls": ["https://www.youtube.com/watch?v=Q2kuPgS1Hi4&list=RDq_zurDiCA1E&index=6"]
+          }
+        ]
+      },
+      {
+        "title": "Factorizacion",
+        "activities": [
+          {
+            "title": "Introducción a la factorización",
+            "description": "La factorización es el proceso de descomponer una expresión algebraica en factores más simples.",
+            "videoUrls": ["https://www.youtube.com/watch?v=Q2kuPgS1Hi4&list=RDq_zurDiCA1E&index=6"]
+          }
+        ]
+      }
+    ]
+  }
+  
