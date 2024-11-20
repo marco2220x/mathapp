@@ -54,7 +54,11 @@ class TopicActivityScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ActivityDetailScreen(activity: activity),
+                        builder: (context) => ActivityDetailScreen(
+                          activity: activity,
+                          currentIndex: index, // Índice actual de la actividad
+                          activities: activities, // Lista completa de actividades
+                        ),
                       ),
                     );
                   },

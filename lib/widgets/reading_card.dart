@@ -1,49 +1,54 @@
 import 'package:flutter/material.dart';
+import 'package:mathapp/widgets/expanded_reading_card.dart';  // Importar el nuevo widget
 
 class ReadingCard extends StatelessWidget {
   final String title;
   final String description;
+  final String videoPath; // Ruta al video
   final VoidCallback onTap;
 
   const ReadingCard({
     Key? key,
     required this.title,
     required this.description,
+    required this.videoPath,
     required this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: () => _showExpandedReadingCard(
+        context,
+        title: title,
+        description: description,
+        videoPath: videoPath,
+      ),
       child: Container(
-        width: 180, // Ancho de la tarjeta ajustado
+        width: 180,
         margin: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Tarjeta de lectura
             Card(
               elevation: 4,
-              margin: const EdgeInsets.only(bottom: 4.0), // Ajustamos margen
+              margin: const EdgeInsets.only(bottom: 4.0),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Container(
                 width: double.infinity,
                 padding: const EdgeInsets.all(8.0),
-                height: 150, // Altura reducida para evitar desbordamientos
+                height: 150,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Imagen de la tarjeta
                     Container(
                       height: 80,
                       width: double.infinity,
                       color: Colors.grey[300],
                     ),
                     const SizedBox(height: 8),
-                    // Título de la lectura
                     Text(
                       title,
                       style: const TextStyle(
@@ -51,39 +56,60 @@ class ReadingCard extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                       textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis, // Corta el texto largo
+                      overflow: TextOverflow.ellipsis,
                     ),
                     const SizedBox(height: 4),
-                    // Descripción con recorte
                     Flexible(
                       child: Text(
                         description,
                         style: const TextStyle(fontSize: 12),
                         textAlign: TextAlign.start,
-                        overflow: TextOverflow.ellipsis, // Corta el texto largo
-                        maxLines: 2, // Limita las líneas del texto
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 2,
                       ),
                     ),
                   ],
                 ),
               ),
             ),
-            // Botón fuera de la tarjeta pero pegado a ella
             SizedBox(
               width: double.infinity,
               child: ElevatedButton.icon(
-                onPressed: onTap,
+                onPressed: () => _showExpandedReadingCard(
+                  context,
+                  title: title,
+                  description: description,
+                  videoPath: videoPath,
+                ),
                 icon: const Icon(Icons.play_arrow),
                 label: const Text("Iniciar"),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
-                  minimumSize: const Size(double.infinity, 40), // Ajuste del tamaño del botón
+                  minimumSize: const Size(double.infinity, 40),
                 ),
               ),
             ),
           ],
         ),
       ),
+    );
+  }
+
+  void _showExpandedReadingCard(
+    BuildContext context, {
+    required String title,
+    required String description,
+    required String videoPath,
+  }) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return ExpandedReadingCard(
+          title: title,
+          description: description,
+          videoPath: videoPath,
+        );
+      },
     );
   }
 }

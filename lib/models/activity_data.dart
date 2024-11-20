@@ -1,24 +1,33 @@
-// En activity_data.dart
 class ActivityData {
   final String title;
   final String description;
-  final List<String> videoUrls;
+  final List<String> equations;
+  final List<String>? content;
 
   ActivityData({
     required this.title,
     required this.description,
-    required this.videoUrls,
+    required this.equations,
+    this.content,
   });
 
-  // Método para crear una instancia de ActivityData desde un JSON
   factory ActivityData.fromJson(Map<String, dynamic> json) {
-    var videoList = json['videoUrls'] as List;
-    List<String> videos = videoList.map((i) => i.toString()).toList();
-    
     return ActivityData(
-      title: json['title'],
-      description: json['description'],
-      videoUrls: videos,
+      title: json['title'] as String,
+      description: json['description'] as String,
+      equations: (json['equations'] as List<dynamic>).map((e) => e as String).toList(),
+      content: json['content'] != null
+          ? (json['content'] as List<dynamic>).map((e) => e as String).toList()
+          : null,
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'title': title,
+      'description': description,
+      'equations': equations,
+      if (content != null) 'content': content,
+    };
   }
 }

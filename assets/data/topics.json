@@ -1,30 +1,158 @@
 {
-    "topics": [
-      {
-        "title": "Polinomios",
-        "activities": [
-          {
-            "title": "Introducción a polinomios",
-            "description": "Un polinomio es una expresión matemática compuesta por variables, coeficientes y exponentes.",
-            "videoUrls": ["https://www.youtube.com/watch?v=Q2kuPgS1Hi4&list=RDq_zurDiCA1E&index=6"]
-          },
-          {
-            "title": "Partes de las expresiones",
-            "description": "Las expresiones polinómicas están formadas por términos que incluyen un coeficiente y una variable.",
-            "videoUrls": ["https://www.youtube.com/watch?v=Q2kuPgS1Hi4&list=RDq_zurDiCA1E&index=6"]
-          }
-        ]
-      },
-      {
-        "title": "Factorizacion",
-        "activities": [
-          {
-            "title": "Introducción a la factorización",
-            "description": "La factorización es el proceso de descomponer una expresión algebraica en factores más simples.",
-            "videoUrls": ["https://www.youtube.com/watch?v=Q2kuPgS1Hi4&list=RDq_zurDiCA1E&index=6"]
-          }
-        ]
-      }
-    ]
-  }
-  
+  "topics": [
+    {
+      "title": "Polinomios",
+      "activities": [
+        {
+          "title": "Introducción a polinomios",
+          "description": "Un polinomio es una expresión matemática que combina variables, coeficientes y exponentes. Cada término está separado por un signo de suma o resta.",
+          "equations": ["P(x) = 3x^2 + 2x + 1"],
+          "content": [
+            "Un polinomio está formado por:",
+            "- Variables: Representan valores desconocidos o cambiantes, como x o y.",
+            "- Coeficientes: Son números que multiplican a las variables, como el 3 en 3x^2.",
+            "- Exponentes: Indican la potencia a la que se eleva la variable, como el 2 en 3x^2."
+          ]
+        },
+        {
+          "title": "Partes de las expresiones",
+          "description": "Cada polinomio tiene partes bien definidas que describen su estructura.",
+          "equations": ["ax^n + bx^{n-1} + ... + c"],
+          "content": [
+            "Las partes principales de un polinomio son:",
+            "- Término principal: El término con el exponente más alto.",
+            "- Coeficiente principal: El coeficiente del término principal.",
+            "- Término independiente: Un número sin variables, como el c en ax^n + ... + c.",
+            "- Grado del polinomio: El mayor exponente presente en el polinomio."
+          ]
+        },
+        {
+          "title": "Operaciones con polinomios",
+          "description": "A continuación aprenderás cómo realizar operaciones matemáticas con polinomios, como la suma, resta y multiplicación.",
+          "equations": [
+            "(3x^2 + 2x) + (x^2 + 5x) = 4x^2 + 7x",
+            "(x + 2)(x - 3) = x^2 - x - 6"
+          ],
+          "content": [
+            "Operaciones básicas con polinomios:",
+            "1. Suma y resta: Combinar términos semejantes.",
+            "2. Multiplicación: Distribuir cada término de un polinomio por todos los términos del otro.",
+            "3. División: Usar división larga o sintética para dividir un polinomio entre otro."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Ecuaciones",
+      "activities": [
+        {
+          "title": "Introducción a las ecuaciones",
+          "description": "Una ecuación es una igualdad matemática que relaciona dos expresiones mediante un signo igual (=).",
+          "equations": ["x + 3 = 7", "2x - 5 = 9"],
+          "content": [
+            "Las ecuaciones tienen dos lados separados por un signo igual.",
+            "- Solución: Valor de la variable que hace verdadera la ecuación.",
+            "- Ejemplo: En x + 3 = 7, la solución es x = 4."
+          ]
+        },
+        {
+          "title": "Ecuaciones lineales",
+          "description": "Resolver ecuaciones lineales consiste en despejar la variable desconocida.",
+          "equations": ["2x + 3 = 9", "x - 7 = 5"],
+          "content": [
+            "Pasos para resolver:",
+            "1. Simplificar ambos lados de la ecuación.",
+            "2. Mover los términos constantes al lado opuesto del signo igual.",
+            "3. Dividir entre el coeficiente de la variable, si es necesario.",
+            "- Ejemplo: 2x + 3 = 9 => 2x = 6 => x = 3."
+          ]
+        },
+        {
+          "title": "Ecuaciones cuadráticas",
+          "description": "Las ecuaciones cuadráticas tienen la forma ax^2 + bx + c = 0.",
+          "equations": ["x^2 - 5x + 6 = 0"],
+          "content": [
+            "Métodos para resolver:",
+            "1. Factorización.",
+            "2. Fórmula general: x = (-b ± √(b^2 - 4ac)) / (2a).",
+            "3. Completando el cuadrado.",
+            "- Ejemplo: x^2 - 5x + 6 = 0 => (x - 2)(x - 3) => x = 2, x = 3."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Factorizacion",
+      "activities": [
+        {
+          "title": "Introducción a la factorización",
+          "description": "Factorizar consiste en descomponer una expresión algebraica en un producto de factores más simples.",
+          "equations": ["x^2 - 9 = (x + 3)(x - 3)"],
+          "content": [
+            "¿Por qué factorizar?",
+            "- Facilita la resolución de ecuaciones cuadráticas.",
+            "- Simplifica cálculos algebraicos."
+          ]
+        },
+        {
+          "title": "Método del factor común",
+          "description": "Sacar el término común de todos los términos de la expresión.",
+          "equations": ["3x^2 + 6x = 3x(x + 2)"],
+          "content": [
+            "Pasos:",
+            "1. Identificar el mayor factor común.",
+            "2. Sacarlo como un factor externo.",
+            "- Ejemplo: 4x^3 - 8x^2 = 4x^2(x - 2)."
+          ]
+        },
+        {
+          "title": "Diferencia de cuadrados",
+          "description": "Para una expresión en la forma a^2 - b^2, la factorización es (a + b)(a - b).",
+          "equations": ["x^2 - 16 = (x + 4)(x - 4)"],
+          "content": [
+            "Usa la fórmula: a^2 - b^2 = (a + b)(a - b).",
+            "- Ejemplo: x^2 - 25 = (x + 5)(x - 5)."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Fracciones",
+      "activities": [
+        {
+          "title": "Introducción a las fracciones",
+          "description": "Una fracción representa una parte de un todo.",
+          "equations": ["1/2 + 1/4 = 3/4"],
+          "content": [
+            "Componentes de una fracción:",
+            "- Numerador: Número superior que indica las partes tomadas.",
+            "- Denominador: Número inferior que indica las partes totales."
+          ]
+        },
+        {
+          "title": "Suma y resta de fracciones",
+          "description": "Para sumar o restar fracciones, estas deben tener el mismo denominador.",
+          "equations": ["1/3 + 1/6 = 1/2", "5/8 - 3/8 = 2/8 = 1/4"],
+          "content": [
+            "Pasos:",
+            "1. Encontrar un denominador común.",
+            "2. Ajustar los numeradores según el nuevo denominador.",
+            "3. Realizar la suma o resta.",
+            "- Ejemplo: 1/2 + 1/4 = 2/4 + 1/4 = 3/4."
+          ]
+        },
+        {
+          "title": "Multiplicación y división de fracciones",
+          "description": "Multiplica los numeradores y los denominadores directamente.",
+          "equations": ["2/3 × 3/4 = 6/12 = 1/2", "3/4 ÷ 2/5 = 3/4 × 5/2 = 15/8"],
+          "content": [
+            "Multiplicación:",
+            "- Multiplica numeradores y denominadores directamente.",
+            "División:",
+            "- Multiplica la primera fracción por el inverso de la segunda."
+          ]
+        }
+      ]
+    }
+  ]
+}
